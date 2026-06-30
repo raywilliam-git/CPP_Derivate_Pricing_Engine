@@ -23,13 +23,13 @@ int main() {
 
         for (double spot = 80.0; spot <= 120.0; spot += 0.5) {
             file << spot << ","
-                 << T << ","
-                 << pricer.price(call, spot, rate, volatility) << ","
-                 << pricer.delta(call, spot, rate, volatility) << ","
-                 << pricer.gamma(call, spot, rate, volatility) << ","
-                 << pricer.vega(call, spot, rate, volatility) << ","
-                 << call.payoff(spot)
-                 << "\n";
+                << T << ","
+                << pricer.price(call, spot, rate, volatility) << ","
+                << pricer.delta(call, spot, rate, volatility) << ","
+                << pricer.gamma(call, spot, rate, volatility) << ","
+                << pricer.vega(call, spot, rate, volatility) << ","
+                << call.payoff(spot)
+                << "\n";
         }
     }
 

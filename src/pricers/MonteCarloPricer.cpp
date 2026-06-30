@@ -56,12 +56,12 @@ MonteCarloResult MonteCarloPricer::priceEuropean(const EuropeanOption& option,
 }
 
 MonteCarloResult MonteCarloPricer::priceAsian(const AsianOption& option,
-                                              double spot,
-                                              double rate,
-                                              double volatility,
-                                              int simulations,
-                                              int timeSteps,
-                                              double alpha) const {
+                                            double spot,
+                                            double rate,
+                                            double volatility,
+                                            int simulations,
+                                            int timeSteps,
+                                            double alpha) const {
     static std::mt19937 generator(123);
     std::normal_distribution<double> normal(0.0, 1.0);
 
@@ -117,12 +117,12 @@ MonteCarloResult MonteCarloPricer::priceAsian(const AsianOption& option,
 
 
 MonteCarloResult MonteCarloPricer::priceGeometricAsian(const AsianOption& option,
-                                                       double spot,
-                                                       double rate,
-                                                       double volatility,
-                                                       int simulations,
-                                                       int timeSteps,
-                                                       double alpha) const {
+                                                    double spot,
+                                                    double rate,
+                                                    double volatility,
+                                                    int simulations,
+                                                    int timeSteps,
+                                                    double alpha) const {
     static std::mt19937 generator(456);
     std::normal_distribution<double> normal(0.0, 1.0);
 

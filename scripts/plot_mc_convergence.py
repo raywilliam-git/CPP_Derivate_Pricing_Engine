@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("results/mc_convergence.csv")
 
-# Graphe 1 : convergence complète
+# Graph 1 - Convergence
 plt.figure(figsize=(9, 5))
 plt.plot(df["simulations"], df["mc_price"], label="Monte Carlo price")
 plt.plot(df["simulations"], df["bs_price"], label="Black-Scholes price")
@@ -22,7 +22,7 @@ plt.grid(True)
 plt.savefig("plots/mc_convergence_full.png", dpi=300, bbox_inches="tight")
 plt.show()
 
-# Graphe 2 : zoom propre
+# Graph 2 - Zoom 
 df_zoom = df[df["simulations"] >= 500]
 
 plt.figure(figsize=(9, 5))
@@ -44,7 +44,7 @@ plt.ylim(9.5, 11.5)
 plt.savefig("plots/mc_convergence_zoom.png", dpi=300, bbox_inches="tight")
 plt.show()
 
-# Graphe 3 : largeur de l'intervalle
+# Graph 3 - Interval
 plt.figure(figsize=(9, 5))
 plt.plot(df["simulations"], df["ci_width"])
 plt.xlabel("Number of simulations")

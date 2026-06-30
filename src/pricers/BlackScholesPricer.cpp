@@ -11,9 +11,9 @@ double BlackScholesPricer::normalPDF(double x) const {
 }
 
 double BlackScholesPricer::d1(const EuropeanOption& option,
-                              double spot,
-                              double rate,
-                              double volatility) const {
+                            double spot,
+                            double rate,
+                            double volatility) const {
     double K = option.getStrike();
     double T = option.getMaturity();
 
@@ -22,17 +22,17 @@ double BlackScholesPricer::d1(const EuropeanOption& option,
 }
 
 double BlackScholesPricer::d2(const EuropeanOption& option,
-                              double spot,
-                              double rate,
-                              double volatility) const {
+                            double spot,
+                            double rate,
+                            double volatility) const {
     return d1(option, spot, rate, volatility)
            - volatility * std::sqrt(option.getMaturity());
 }
 
 double BlackScholesPricer::price(const EuropeanOption& option,
-                                 double spot,
-                                 double rate,
-                                 double volatility) const {
+                                double spot,
+                                double rate,
+                                double volatility) const {
     double K = option.getStrike();
     double T = option.getMaturity();
 
@@ -49,9 +49,9 @@ double BlackScholesPricer::price(const EuropeanOption& option,
 }
 
 double BlackScholesPricer::delta(const EuropeanOption& option,
-                                 double spot,
-                                 double rate,
-                                 double volatility) const {
+                                double spot,
+                                double rate,
+                                double volatility) const {
     double d_1 = d1(option, spot, rate, volatility);
 
     if (option.getIsCall()) {
@@ -62,9 +62,9 @@ double BlackScholesPricer::delta(const EuropeanOption& option,
 }
 
 double BlackScholesPricer::gamma(const EuropeanOption& option,
-                                 double spot,
-                                 double rate,
-                                 double volatility) const {
+                                double spot,
+                                double rate,
+                                double volatility) const {
     double d_1 = d1(option, spot, rate, volatility);
     double T = option.getMaturity();
 

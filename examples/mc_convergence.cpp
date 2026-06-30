@@ -31,13 +31,13 @@ int main() {
         double halfWidth = result.confidenceIntervalWidth / 2.0;
 
         file << simulations << ","
-             << result.price << ","
-             << bsPrice << ","
-             << result.confidenceIntervalWidth << ","
-             << result.price - halfWidth << ","
-             << result.price + halfWidth << ","
-             << std::abs(result.price - bsPrice)
-             << "\n";
+            << result.price << ","
+            << bsPrice << ","
+            << result.confidenceIntervalWidth << ","
+            << result.price - halfWidth << ","
+            << result.price + halfWidth << ","
+            << std::abs(result.price - bsPrice)
+            << "\n";
     }
 
     file.close();

@@ -41,10 +41,10 @@ int main() {
             );
 
         file << spot << ","
-             << europeanPrice << ","
-             << asianResult.price << ","
-             << asianResult.confidenceIntervalWidth
-             << "\n";
+            << europeanPrice << ","
+            << asianResult.price << ","
+            << asianResult.confidenceIntervalWidth
+            << "\n";
 
         std::cout << "Done spot = " << spot << std::endl;
     }

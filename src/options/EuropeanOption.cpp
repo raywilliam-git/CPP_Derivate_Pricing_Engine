@@ -3,8 +3,8 @@
 
 // Constructor
 EuropeanOption::EuropeanOption(double K,
-                               double T,
-                               bool isCall)
+                            double T,
+                            bool isCall)
     : Option(K, T), isCall(isCall) {}
 
 // Getter

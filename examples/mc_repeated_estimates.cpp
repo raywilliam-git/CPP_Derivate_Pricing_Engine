@@ -36,9 +36,9 @@ int main() {
                 mcPricer.priceEuropean(call, spot, rate, volatility, simulations);
 
             file << simulations << ","
-                 << k << ","
-                 << result.price << ","
-                 << bsPrice << "\n";
+                << k << ","
+                << result.price << ","
+                << bsPrice << "\n";
         }
     }
 
