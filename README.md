@@ -23,7 +23,7 @@ scripts/     Python plotting scripts
 results/     Generated CSV files
 plots/       Generated figures
 
-
+```
 ## Methodology
 
 The project implements several pricing methods for derivative products under the assumption of geometric Brownian motion.
