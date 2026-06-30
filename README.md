@@ -5,13 +5,13 @@ C++ quantitative finance project implementing option pricing models and numerica
 ## Features
 
 - European call/put payoff
-- Black-Scholes closed-form pricing
-- Greeks: Delta, Gamma, Vega
+- Black-Scholes analytical pricing
+- Greeks computation: Delta, Gamma, Vega
 - Monte Carlo pricing with confidence intervals
 - Convergence analysis
 - Arithmetic Asian option pricing
 - Geometric Asian option pricing
-- CSV generation and Python plots
+- CSV generation and Python visualization
 
 ## Project Structure
 
@@ -22,6 +22,19 @@ examples/    Numerical experiments
 scripts/     Python plotting scripts
 results/     Generated CSV files
 plots/       Generated figures
+main.cpp     Testing Pricers
+
+```
+
+## Project Structure
+
+```text
+include/     Header files and class definitions
+src/         C++ Core pricing engine implementation
+examples/    Numerical experiments and simulations
+scripts/     Python plotting and data visualization
+results/     CSV output files
+plots/       Generated result figures
 
 ```
 ## Methodology
@@ -42,12 +55,12 @@ The project implements several pricing methods for derivative products under the
 
 ![Black-Scholes Price](plots/european_options/call_price_vs_spot.png)
 
-
+European option price evolution as a function of underlying spot price.
 ### Delta
 
 ![Delta](plots/european_options/call_delta_vs_spot.png)
 
-
+Sensitivity of option price with respect to spot price variations.
 
 
 ### Monte Carlo Convergence
@@ -55,6 +68,8 @@ The project implements several pricing methods for derivative products under the
 ![Monte Carlo Convergence](plots/european_options/mc_convergence_full.png)
 
 ### European vs Asian Option Pricing
+
+Impact of monitoring frequency on arithmetic Asian option valuation.
 
 ![European vs Asian](plots/asian_options/asian_vs_european.png)
 
@@ -76,12 +91,14 @@ Simulation of asset trajectories under geometric Brownian motion with confidence
 
 Pricing of path-dependent arithmetic and geometric Asian options using Monte Carlo path simulation.
 
-## Future Extensions
+## Further Extensions
 
-Possible future improvements:
+Advanced quantitative finance models currently being explored in Python separately in another repository focused on stochastic calculus and derivative pricing theory.
+
+Potential additions include:
 
 - Barrier option pricing
-- Variance reduction techniques
-- Control variates
-- Finite difference methods for PDE pricing
-- Implied volatility solver
+- Variance reduction methods
+- Control variate techniques
+- PDE-based pricing solvers
+- Implied volatility calibration
