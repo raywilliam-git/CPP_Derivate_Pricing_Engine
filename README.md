@@ -45,13 +45,15 @@ The project implements several pricing methods for derivative products under the
 ![Black-Scholes Price](plots/european_options/call_price_vs_spot.png)
 
 European option price evolution as a function of underlying spot price.
-Comment : As time to maturity decreases, the Black-Scholes price progressively converges toward the option payoff at expiration.
+
+- Comment : As time to maturity decreases, the Black-Scholes price progressively converges toward the option payoff at expiration.
 ### Delta
 
 ![Delta](plots/european_options/call_delta_vs_spot.png)
 
 Sensitivity of option price with respect to spot price variations.
-Comment : The call price is strictly increasing with the underlying price. As maturity decreases, Delta approaches 1 for ITM options, 0 for OTM options, and changes more abruptly around the strike price.
+
+- Comment : The call price is strictly increasing with the underlying price. As maturity decreases, Delta approaches 1 for ITM options, 0 for OTM options, and changes more abruptly around the strike price.
 
 
 ### Monte Carlo Convergence
@@ -60,7 +62,7 @@ Comment : The call price is strictly increasing with the underlying price. As ma
 
 Monte Carlo estimator convergence toward the analytical Black-Scholes price as the number of simulations increases.
 
-Comment : As the number of simulations increases, the confidence interval narrows and the Monte Carlo estimator converges more accurately toward the Black-Scholes price.
+- Comment : As the number of simulations increases, the confidence interval narrows and the Monte Carlo estimator converges more accurately toward the Black-Scholes price.
 
 ### European vs Asian Option Pricing
 
@@ -68,7 +70,7 @@ Comment : As the number of simulations increases, the confidence interval narrow
 
 Comparison between European and Asian option prices for identical market parameters.
 
-Comment : Asian options are cheaper than European options as averaging smooths the payoff distribution and reduces exposure to extreme market movements.
+- Comment : Asian options are cheaper than European options as averaging smooths the payoff distribution and reduces exposure to extreme market movements.
 
 ### Monitoring Frequency Effect on Asian Options
 
@@ -76,7 +78,7 @@ Comment : Asian options are cheaper than European options as averaging smooths t
 
 Impact of monitoring frequency on arithmetic Asian option valuation.
 
-Comment : Although the absolute confidence interval remains relatively small, the relative pricing error can still be significant, motivating the use of variance reduction methods.
+- Comment : Although the absolute confidence interval remains relatively small, the relative pricing error can still be significant, motivating the use of variance reduction methods.
 
 ## Models Implemented
 
